@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+  </head>
+  <body>
+    <!-- 导航 -->
+    <nav class="ui inverted vertical segment m-paddded-tb-mini m-shadow-small">
+      <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+          <h2 class="ui teal header item">Blog</h2>
+          <a href="#" class="m-item item m-mobile-hide"
+            ><i class="home icon"></i>首页</a
+          >
+          <a href="#" class="m-item item m-mobile-hide"
+            ><i class="idea icon"></i>分类</a
+          >
+          <a href="#" class="m-item item m-mobile-hide"
+            ><i class="tags icon"></i>标签</a
+          >
+          <a href="#" class="m-item item m-mobile-hide"
+            ><i class="tags icon"></i>归档</a
+          >
+          <a href="#" class="m-item active item m-mobile-hide"
+            ><i class="info icon"></i>关于我</a
+          >
+          <div class="right m-item item m-mobile-hide">
+            <div class="ui icon inverted transparent input">
+              <input type="text" placeholder="search..." />
+              <i class="search link icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        href="#"
+        class="ui menu toggle black icon button m-right-top m-mobile-show"
+      >
+        <i class="sidebar icon"></i>
+      </a>
+    </nav>
+
+    <!-- 中间内容 -->
+    <div class="m-container-small m-paddded-tb-large">
+      <div class="ui container">
+        <div class="ui grid stackable">
+          <div class="eleven wide column">
+            <div class="ui segment basic">
+              <img src="https://picsum.photos/800/400" alt="" class="ui rounded image">
+            </div>
+          </div>
+          <div class="five wide column">
+            <div class="ui top attached segment">
+              <div class="ui header">关于我</div>
+            </div>
+            <div class="ui attached segment">
+              <p class="m-text">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+              <p class="m-text">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+            </div>
+            <div class="ui attached segment">
+              <div class="ui mini orange basic left pointing label">编程</div>
+              <div class="ui mini orange basic left pointing label">写作</div>
+              <div class="ui mini orange basic left pointing label">思考</div>
+              <div class="ui mini orange basic left pointing label">运动</div>
+            </div>
+            <div class="ui attached segment">
+              <div class="ui mini teal m-margin-tb-tiny basic left pointing label">Java</div>
+              <div class="ui mini teal m-margin-tb-tiny basic left pointing label">JavaScript</div>
+              <div class="ui mini teal m-margin-tb-tiny basic left pointing label">React</div>
+              <div class="ui mini teal m-margin-tb-tiny basic left pointing label">Vue</div>
+              <div class="ui mini teal m-margin-tb-tiny basic left pointing label">MySQL</div>
+              <div class="ui mini teal m-margin-tb-tiny basic left pointing label">...</div>
+            </div>
+            <div class="ui bottom attached segment">
+              <a href="https://github.com/zouzonghua" class="ui circular icon button">
+                <i class="icon github"></i>
+              </a>
+              <a href="" class="ui wechat circular icon button">
+                <i class="icon weixin"></i>
+              </a>
+              <a href="" class="ui qq circular icon button" data-content="2977297081" data-position="bottom center">
+                <i class="icon qq"></i>
+              </a>
+            </div>
+          <div id="wechat-qr" class="ui flowing popup transition hidden">
+            <img src="../static/images/wechat.JPG"  th:src="@{/images/wechat.JPG}" alt="" class="ui image rounded bordered" style="width: 100px;">
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="ui inverted vertical segment m-paddded-tb-massive">
+      <div class="ui center aligned container">
+        <div class="ui inverted divided grid stackable">
+          <div class="three wide column">
+            <img
+              src="../static/images/wechat.JPG" th:src="@{/images/wechat.JPG}"
+              alt=""
+              srcset=""
+              class="ui rounded image"
+            />
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header">最新博客</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item">用户故事</a>
+              <a href="#" class="item">用户故事</a>
+              <a href="#" class="item">用户故事</a>
+              <a href="#" class="item">用户故事</a>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header">联系我</h4>
+            <div class="ui inverted link list">
+              <a href="#" class="item">用户故事</a>
+              <a href="#" class="item">用户故事</a>
+            </div>
+          </div>
+          <div class="seven wide column">
+            <h4 class="ui inverted header">最新博客</h4>
+            <p>
+              这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...
+            </p>
+          </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-opacity-mini">Copyright © 2020 - 2022</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+      $(".menu.toggle").click(() => {
+        $(".m-item").toggleClass("m-mobile-hide", 1000, "easeOutSine");
+      });
+      $('.qq').popup();
+      $('.wechat').popup({
+        popup: $('#wechat-qr'),
+        on:'hover',
+        position: 'bottom center'
+      });
+    </script>
+  </body>
+</html>

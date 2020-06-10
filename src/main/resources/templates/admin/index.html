@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head th:replace="admin/_fragments::head(~{::title})">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>博客管理</title>
+  </head>
+  <body>
+    <!-- 导航 -->
+    <nav th:replace="admin/_fragments::menu(1)" ></nav>
+    <!-- 二级导航 -->
+    <nav th:replace="admin/_fragments::sub-menu(1)" ></nav>
+
+
+    <!-- 中间内容 -->
+    <div class="m-paddded-tb-large">
+      <div class="ui container">
+        <div class="ui success message container">
+          <h2>Hi</h2>
+          <p>邹宗华，欢迎登录！</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer th:replace="admin/_fragments::footer" ></footer>
+
+    <!-- 引入js脚本-->
+    <th:block th:replace="admin/_fragments::script"></th:block>
+
+    <script>
+      $('.menu.toggle').click(() => {
+        $('.m-item').toggleClass('m-mobile-hide', 1000, "easeOutSine");
+      });
+      $('.ui.dropdown').dropdown({  on: 'hover'});
+    </script>
+  </body>
+</html>
