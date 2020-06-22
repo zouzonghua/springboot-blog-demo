@@ -125,10 +125,12 @@ body {
 /* container */
 .m-container {
   max-width: 72em;
+  min-height: calc(100vh - 427px);
   margin: auto;
 }
 .m-container-small {
   max-width: 60em;
+  min-height: calc(100vh - 427px);
   margin: auto;
 }
 
@@ -180,6 +182,9 @@ body {
   }
   .m-mobile-wide {
     width: 100%;
+  }
+  .m-container,.m-container-small {
+    min-height: calc(50vh);
   }
 
 }
